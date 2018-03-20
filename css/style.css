@@ -175,6 +175,17 @@ textarea:focus {
         border: 1px solid #fb8c00d4;
         border-radius: 4px;
 }
+.nmbmsg   {
+        margin-left: 175px;
+        background-color: #C8E6C9;
+        font-size: 16px;
+        height: 40px;
+        width: 300px;
+        border-radius: 6px;
+        color: #139813;
+        padding: 10px;
+        display: none;
+       }
 .spbutton
 {
         color: #fff;
@@ -262,6 +273,17 @@ textarea:focus {
         border-radius: 4px;
         margin: 39px;
 }
+.matmsg   {
+        margin-left: 175px;
+        background-color: #C8E6C9;
+        font-size: 16px;
+        height: 40px;
+        width: 300px;
+        border-radius: 6px;
+        color: #139813;
+        padding: 10px;
+        display: none;
+       }
 .matselect
 {
         color: #fff;
@@ -307,6 +329,17 @@ textarea:focus {
         border: 1px solid #fb8c00d4;
         border-radius: 4px;
 }
+.msg   {
+        margin-left: 175px;
+        background-color: #C8E6C9;
+        font-size: 16px;
+        height: 40px;
+        width: 300px;
+        border-radius: 6px;
+        color: #139813;
+        padding: 10px;
+        display: none;
+       }
 .stroutput
 {
         background-color: #655c5c1c;
@@ -352,6 +385,17 @@ textarea:focus {
 
 
 }
+.pirmsg   {
+        margin-left: 175px;
+        background-color: #C8E6C9;
+        font-size: 16px;
+        height: 40px;
+        width: 300px;
+        border-radius: 6px;
+        color: #139813;
+        padding: 10px;
+        display: none;
+       }
 .pirinp {
         background-color: #655c5c1c;
         height: 48px;
@@ -365,10 +409,10 @@ textarea:focus {
 .piroutput
 {
         background-color:#655c5c1c;
-        font-size:14px;
+        font-size:12px;
         padding:;
-        /* height: 183px;
-        width: 285px; */
+        height: 214px;;
+        width: 285px;
         border-radius:5px;
         border: 1px solid #fb8c00d4;
         text-align: center;

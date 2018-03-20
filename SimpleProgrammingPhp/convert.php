@@ -11,11 +11,14 @@ include 'Oct_To_Hex.php';
 include ("Hex_To_Dec.php");
 include ("Hex_To_Bin.php");
 include ("Hex_To_Octal.php");
+include '../include/connect.php';
+
 
 
           $s1 = $_POST['selectid1'];
           $s2 = $_POST['selectid2'];
           $nmb=$_POST['input'];
+          $SearchFor=$s1."--".$s2;
 
       if ($s1=="decimal"  && $s2 =="binary" ) {
          $number = deciToBin();
@@ -98,5 +101,23 @@ include ("Hex_To_Octal.php");
       }
 
       echo $number;
+      $insert_sql="INSERT INTO SearchHistory (SearchFor,input,result,user_id,date_time)
+      VALUES ('$SearchFor','$nmb','$number',5,CURRENT_TIMESTAMP())";
 
-?>
+      if($conn->query($insert_sql)==true){
+       ?>
+         <script type="text/javascript">
+          document.getElementById('nmbmsg').innerHTML="data insert succesfully";
+         </script>
+      <?php
+      }
+      else {
+      ?>
+         <script type="text/javascript">
+         document.getElementById('nmbmsg').innerHTML="error occured while inserting your data";
+         </script>
+      <?php
+      }
+      $conn->close();
+
+      ?>

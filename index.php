@@ -35,7 +35,7 @@
        <h1>
        Number Conversion  System .
        </h1>
-
+          <p id="nmbmsg" class="nmbmsg"></p>
            <div class="spelmnt1">
                <br><br>
 
@@ -71,7 +71,7 @@
          <h1>
          Find Gcd & Lcm Between Two Number.
          </h1>
-
+          <p id="matmsg" class="matmsg"></p>
           <div class="matelmnt1">
 
                 <select class="matselect"  id="matselectid1">
@@ -97,7 +97,7 @@
         <h1>
         String Manipulation
         </h1>
-
+             <div class="msg" id="msg"></div>
                     <div class="elmnt1">
                                 <br><br>
                                 <input class="strinp" type="text" id="strinput1" placeholder="Enter a string" value=""></input>
@@ -118,14 +118,16 @@
         <h1>
             See Your number of  Piramid
         </h1>
-
+        <p id="pirmsg" class="pirmsg"></p>
                     <div class="pirelmnt1">
                                 <br><br><br>
                                 <input class="pirinp" type="text" id="pirinput1" placeholder="Enter row Number" value=""></input>
                     </div>
                     <div class="pirelemnt2">
-
-                  <textarea class="piroutput" id="piroutput" rows="10" placeholder="Show output" value="" cols="30"></textarea>
+                      <div class="piroutput" id="piroutput">
+                        
+                      </div>
+                  <!-- <textarea class="piroutput" id="piroutput" rows="10" placeholder="Show output" value="" cols="30"></textarea> -->
                     </div>
 
                     <input class="pirbutton"  type="submit" id="pirsubmit" value="CONVERT"/>
