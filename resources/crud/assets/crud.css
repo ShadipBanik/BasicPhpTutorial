@@ -1,0 +1,17 @@
+
+body{
+ background-color: #EEEEEE;
+}
+.header{text-align: center;}
+.main{
+          width: 1000px;
+          margin-top: 50px;
+          background: #fff;
+          border-radius: 8px;
+          border: 1px solid #bdbdbdb5;
+}
+table{
+
+   text-align: center;
+
+}
