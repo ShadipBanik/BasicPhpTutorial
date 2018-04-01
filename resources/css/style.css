@@ -1,573 +1,66 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-*, *:before, *:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-html, body {
+
+.row.content {height: 550px;}
+
+.sidenav {
+  background-color: #2ecc71;
   height: 100vh;
-}
-
-body {
-  font: 14px/1 'Open Sans', sans-serif;
-  color: #555;
-  background: #eee;
-}
-
-h1 {
-  padding: 38px 0;
-  font-weight: 400;
-  text-align: center;
-}
-
-p {
-  margin: 0 0 20px;
-  line-height: 1.5;
-}
-
-main {
-      min-width: 239px;
-      max-width: 867px;
-      padding: 47px;
-      margin: auto;
-      background: #fff;
-}
-
-section {
-  display: none;
-  padding: 20px 0 0;
-  border-top: 1px solid #ddd;
-}
-
-.tabinp {
-  display: none;
-}
-
-label {
-  display: inline-block;
-  margin: 1px 3px -1px;
-  padding: 16px 5px;
-  font-weight: 600;
-  text-align: center;
-  color: #bbb;
-  border: 1px solid transparent;
-}
-
-label:before {
-  font-family: fontawesome;
-  font-weight: normal;
-  margin-right: 10px;
-}
-
-label[for*='1']:before {
-  content: '\f1cb';
-}
-
-label[for*='2']:before {
-  content: '\f1b2';
-}
-
-label[for*='3']:before {
-  content: '\f12e';
-}
-
-label[for*='4']:before {
-  content: '\f1b3';
-}
-label[for*='5']:before {
-  content: '\f219';
-}
-label[for*='6']:before {
-  content: '\f295';
-}
-
-label:hover {
-  color: #888;
-  cursor: pointer;
-}
-
-input:checked+label {
-  color: #555;
-  border: 1px solid #ddd;
-  border-top: 2px solid #4dcb44;
-  border-bottom: 1px solid #fff;
-}
-
-#tab1:checked ~ #content1,
-#tab2:checked ~ #content2,
-#tab3:checked ~ #content3,
-#tab4:checked ~ #content4,
-#tab5:checked ~ #content5,
-#tab6:checked ~ #content6
- {
-  display: block;
-}
-
-@media screen and (max-width: 650px) {
-  label {
-    font-size: 0;
-  }
-
-  label:before {
-    margin: 0;
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 400px) {
-  label {
-    padding: 15px;
-  }
-}
-
-.center
-{
-  text-align: center;
-  border: 2px solid #dddddd;
-  padding: 15px;
-  width: 100%;
-  border-radius: 5px
-}
-
-option{
-  background-color:  #4dcb44;
-}
-input:focus {
-    outline:none;
-}
-select:focus{outline:none;}
-
-/* section simple programming php */
-
-
-select > option:checked {
-    outline: none;
-}
-
-.spelmnt1
-{
-        height: 150px;
-        width: 300px;
-        text-align: center;
-        float: left;
-
-}
-.spelemnt2
-{
-
-        height: 150px;
-        width: 300px;
-        text-align: center;
-        float: left;
-        margin-left: 103px;
-
-}
-.spinp {
-        background-color: #655c5c1c;
-        height: 60px;
-        width: 283px;
-        text-align: center;
-        font-size: 25px;
-        border: 2px solid #4dcb44;
-        border-radius: 4px;
-}
-textarea:focus {
-    outline:none;
-}
-
-.spoutput
-{       background-color: #655c5c1c;
-        font-size: 25px;
-        text-align: center;
-        border: 2px solid #4dcb44;
-        border-radius: 4px;
-        padding: 4px;
-}
-.nmbmsg   {
-        margin-left: 175px;
-        background-color: #C8E6C9;
-        font-size: 16px;
-        height: 40px;
-        width: 300px;
-        border-radius: 6px;
-        color: #139813;
-        padding: 10px;
-        display: none;
-       }
-.spbutton
-{
-        color: #fff;
-        background-color: #272f4e;
-        display: inline-block;
-        padding: 15px 29px;
-        margin-bottom: 0;
-        font-size: 17px;
-        line-height: 1.42857143;
-        text-align: center;
-        border: 3px solid #4dcb44;
-        border-radius: 4px;
-        margin: 39px;
-}
-.spselect
-{
-      color: #fff;
-      background-color: #272f4e;
-      display: inline-block;
-      padding: 6px 12px;
-      margin-bottom: 0;
-      font-size: 14px;
-      line-height: 1.42857143;
-      text-align: center;
-      border: 3px solid #4dcb44;
-      border-radius: 4px;
-      margin: 10px;
-}
-
-/* gcd and lcm; */
-
-
-
-.matelmnt1
-{
-        height: 150px;
-        width: 300px;
-        text-align: center;
-        float: left;
-        margin-left: 27px;
-}
-.matelemnt2
-{
-
-        height: 150px;
-        width: 300px;
-        text-align: center;
-        float: left;
-        margin-left: 85px;
-
-
-}
-.matinp {
-        background-color: #655c5c1c;
-        height: 48px;
-        width: 283px;
-        margin:5px;
-        text-align: center;
-        font-size: 18px;
-        border: 2px solid #4dcb44;
-        border-radius: 4px;
-}
-.matoutput
-{       background-color: #655c5c1c;
-        font-size: 25px;
-        text-align: center;
-        border: 2px solid #4dcb44;
-        padding: 29PX;
-        border-radius: 4px;
-        margin-top:30px;
-}
-.matbutton
-{
   color: #fff;
-  background-color: #272f4e;
-  display: inline-block;
-  padding: 15px 29px;
-  margin-bottom: 0;
-  font-size: 17px;
-  line-height: 1.42857143;
-  text-align: center;
-  border: 3px solid #4dcb44;
-  border-radius: 4px;
-  margin: 39px;
 }
-.matmsg   {
-        margin-left: 175px;
-        background-color: #C8E6C9;
-        font-size: 16px;
-        height: 40px;
-        width: 300px;
-        border-radius: 6px;
-        color: #139813;
-        padding: 10px;
-        display: none;
-       }
-.matselect
-{
-  color: #fff;
-  background-color: #272f4e;
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  line-height: 1.42857143;
-  text-align: center;
-  border: 3px solid #4dcb44;
-  border-radius: 4px;
-  margin: 10px;
-  }
-/* string manipulation */
-
-.elmnt1
-{
-        height: 150px;
-        width: 300px;
-        text-align: center;
-        float: left;
-
+hr{
+  border:1px solid #fff;
+  margin-top: 0px;
 }
-.elemnt2
-{
-
-        height: 150px;
-        width: 300px;
-        text-align: center;
-        float: left;
-        margin-left: 49px;
-
-
+@media screen and (max-width: 767px) {
+  .row.content {height: auto;}
 }
-.strinp {
-        background-color: #655c5c1c;
-        height: 48px;
-        width: 283px;
-        margin:5px;
-        text-align: center;
-        font-size: 18px;
-        border: 2px solid #4dcb44;
-        border-radius: 4px;
+.col-sm-10 {
+    margin-left: 228px;
+    padding: 7px;
 }
-.msg   {
-        margin-left: 175px;
-        background-color: #C8E6C9;
-        font-size: 16px;
-        height: 40px;
-        width: 300px;
-        border-radius: 6px;
-        color: #139813;
-        padding: 10px;
-        display: none;
-       }
-.stroutput
-{
-        background-color: #655c5c1c;
-        font-size: 17px;
-        text-align: center;
-        border: 2px solid #4dcb44;
-        padding: 44PX;
-        border-radius: 4px;
+.content2{
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 58px;
+    background-color: #f9f9f900;
 }
-.strbutton
-{
-  color: #fff;
-  background-color: #272f4e;
-  display: inline-block;
-  padding: 15px 29px;
-  margin-bottom: 0;
-  font-size: 17px;
-  line-height: 1.42857143;
-  text-align: center;
-  border: 3px solid #4dcb44;
-  border-radius: 4px;
-  margin: 39px;
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #7fe08fcc;
 }
-
-/*  number of Piramid   */
-.pirelmnt1
-{
-        height: 150px;
-        width: 300px;
-        text-align: center;
-        float: left;
-
+.nav>li>a{
+     text-decoration: none;
+     color: #fff;
+   }
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #6edc89;
+    color: #fff;
 }
-.pirelemnt2
-{
-
-        height: 183px;
-        width: 285px;
-        text-align: center;
-        float: left;
-        margin-left: 49px;
-
-
+#demo{
+       background: #328e59;
 }
-.pirmsg   {
-        margin-left: 175px;
-        background-color: #C8E6C9;
-        font-size: 16px;
-        height: 40px;
-        width: 300px;
-        border-radius: 6px;
-        color: #139813;
-        padding: 10px;
-        display: none;
-       }
-.pirinp {
-        background-color: #655c5c1c;
-        height: 48px;
-        width: 283px;
-        margin:5px;
-        text-align: center;
-        font-size: 18px;
-        border: 2px solid #4dcb44;
-        border-radius: 4px;
+#demo>li>a{
+     text-decoration: none;
+     color: #fff;
+   }
+  #demo>li>a:focus, #demo>li>a:hover {
+       text-decoration: none;
+       color: black;
+   }
+.active>ul>li{
+  display:block;
+  padding:5px;
 }
-.piroutput
-{
-        background-color:#655c5c1c;
-        font-size:12px;
-        padding:;
-        height: 214px;;
-        width: 285px;
-        border-radius:5px;
-        border: 2px solid #4dcb44;
-        text-align: center;
+.navbar-default .navbar-nav>li>a {
+    color: #2ecc71;
 }
-.pirbutton
-{
-  color: #fff;
-  background-color: #272f4e;
-  display: inline-block;
-  padding: 15px 29px;
-  margin-bottom: 0;
-  font-size: 17px;
-  line-height: 1.42857143;
-  text-align: center;
-  border: 3px solid #4dcb44;
-  border-radius: 4px;
-  margin: 39px;
+.navbar-default .navbar-brand {
+    color: #2ecc71;
 }
-
-/* diamon series */
-.diaelmnt1
-{
-        height: 150px;
-        width: 300px;
-        text-align: center;
-        float: left;
-
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    color: #2ecc71;
+    background-color:#f8f8f8;
 }
-.diaelemnt2
-{
-
-        height: 183px;
-        width: 285px;
-        text-align: center;
-        float: left;
-        margin-left: 49px;
-
-
-}
-.diamsg   {
-        margin-left: 175px;
-        background-color: #C8E6C9;
-        font-size: 16px;
-        height: 40px;
-        width: 300px;
-        border-radius: 6px;
-        color: #139813;
-        padding: 10px;
-        display: none;
-       }
-.diainp {
-        background-color: #655c5c1c;
-        height: 48px;
-        width: 283px;
-        margin:5px;
-        text-align: center;
-        font-size: 18px;
-        border: 2px solid #4dcb44;
-        border-radius: 4px;
-}
-.diaoutput
-{
-        background-color:#655c5c1c;
-        font-size:12px;
-        padding:;
-        height: 214px;;
-        width: 285px;
-        border-radius:5px;
-        border: 2px solid #4dcb44;
-        text-align: center;
-}
-.diabutton
-{
-  color: #fff;
-  background-color: #272f4e;
-  display: inline-block;
-  padding: 15px 29px;
-  margin-bottom: 0;
-  font-size: 17px;
-  line-height: 1.42857143;
-  text-align: center;
-  border: 3px solid #4dcb44;
-  border-radius: 4px;
-  margin: 39px;
-}
-/* Divisible number */
-.divelmnt1
-{
-        height: 150px;
-        width: 300px;
-        text-align: center;
-        float: left;
-        margin-left: 32px;
-
-}
-.divelemnt2
-{
-
-        height: 150px;
-        width: 300px;
-        text-align: center;
-        float: left;
-        margin-left: 49px;
-
-
-}
-.divinp {
-        background-color: #655c5c1c;
-        height: 48px;
-        width: 283px;
-        margin:5px;
-        text-align: center;
-        font-size: 18px;
-        border: 2px solid #4dcb44;
-        border-radius: 4px;
-}
-.divmsg   {
-        margin-left: 175px;
-        background-color: #C8E6C9;
-        font-size: 16px;
-        height: 40px;
-        width: 300px;
-        border-radius: 6px;
-        color: #139813;
-        padding: 10px;
-        display: none;
-       }
-.divoutput
-{
-        background-color: #655c5c1c;
-        font-size: 17px;
-        text-align: center;
-        border: 2px solid #4dcb44;
-        padding: 44PX;
-        border-radius: 4px;
-}
-.divbutton
-{
-  color: #fff;
-  background-color: #272f4e;
-  display: inline-block;
-  padding: 15px 29px;
-  margin-bottom: 0;
-  font-size: 17px;
-  line-height: 1.42857143;
-  text-align: center;
-  border: 3px solid #4dcb44;
-  border-radius: 4px;
-  margin-top: 58px;
-}
-
-/* creat role page  */

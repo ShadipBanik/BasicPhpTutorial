@@ -27,7 +27,7 @@ include 'view/header.php';
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="password" placeholder="Password">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -60,15 +60,25 @@ include 'view/header.php';
 				  if(isset($_POST['submit']))
 				  {
 				      $email=$_POST['email'];
-				      $pass=sha1($_POST['pass']);
+				      $password=sha1($_POST['password']);
 
-				      $check_user="SELECT * FROM `user` WHERE email='$email' AND password='$pass'";
+				      $check_user="SELECT * FROM `user` WHERE email='$email' AND password='$password'";
+
 				      $run=mysqli_query($conn,$check_user);
-				      if(mysqli_num_rows($run)==true)
-				      {
+							$row=mysqli_fetch_assoc($run);
+							$count=mysqli_num_rows($run);
 
-				         header('Location:welcome.php');
-				         $_SESSION['email']=$email;
+				      if($count==true)
+					      {
+									
+									$_SESSION['user']=array(
+									'email'=>$row['email'],
+									'password'=>$row['password'],
+									'role'=>$row['role']
+									);
+										echo "hello";
+									$role=$_SESSION['user']['role'];
+								  header('Location:welcome.php');
 				      }
 				      else
 				      {

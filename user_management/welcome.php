@@ -1,95 +1,85 @@
 <?php
-session_start();
+ session_start();
 
-if(!$_SESSION['email'])
-{
+ if(!$_SESSION['user']['role'])
+ {
 
-  header("Location: login.php");//redirect to login page to secure the welcome page without login access.
-}
+   header("Location: ../user_management/login.php");//redirect to login page to secure the welcome page without login access.
+ }
  ?>
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html lang="en">
+<head>
+      <title></title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href ="../resources/css/style.css">
+      <link rel="stylesheet" href="../resources/css/sipmle.css" />
+</head>
 
-        <title>Collapsible sidebar using Bootstrap 3</title>
+<body>
+    <div class="container-fluid">
+       <div class="row content">
+          <div class="col-sm-2 sidenav  navbar-fixed-top hidden-xs">
+              <h2>Tutorials</h2>
+              <hr>
+              <ul class="nav nav-pills  nav-stacked">
+            <li class="active">
+              <a href="#section1" data-toggle="collapse" data-target="#demo">Simple Programming &nbsp;<span class="glyphicon glyphicon-menu-down"></span></a>
+                <ul id="demo" class="collapse">
+                  <li class="active"><a id="bes" href="#"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Home</a></li>
+                  <?php
+                  include 'include/connect.php';
+                   $sql = "SELECT name FROM `role` WHERE id=".$_SESSION['user']['role'];
+                   $rl_run=mysqli_query($conn,$sql);
+                   $row=mysqli_fetch_assoc($rl_run);
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+                  if($row['name']=='admin'){
+                   echo '<li><a  id="srch" href="#"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Search History</a></li>';
+                  ?>
+                </ul>
+               </li>
+               <?php
 
-        <link rel="stylesheet" href="../resources/css/welcome.css"/>
+                echo '<li><a href="#" id="add_role">Role</a></li>';
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"/>
+            }
+                  ?>
+              </ul><br>
+          </div>
+           <div class="col-sm-10">
+                <nav class="navbar navbar-default col-sm-10 navbar-fixed-top ">
+                   <div class="container-fluid">
+                      <div class="navbar-header">
+                           <a class="navbar-brand" href="#">Basic Programming Tutorial</a>
+                      </div>
 
+                         <ul class="nav navbar-nav navbar-right">
+                           <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+                           <li><a href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Contact</a></li>
+                           <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;Profile</a></li>
+                           <li>
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Action &nbsp;<span class="glyphicon glyphicon-menu-down"></span></a>
 
-    </head>
-    <body>
+                             <ul class="dropdown-menu">
+                               <li><a href="#">Profile</a></li>
+                               <li><a href="#">Message</a></li>
+                               <li><a href="logout.php">Log Out</a></li>
+                             </ul>
+                           </li>
+                        </ul>
 
-        <div class="wrapper-nav">
-          <nav id="sidebar">
-                    <div class="sidebar-header">
-
-                    </div>
-
-                    <ul class="list-unstyled components">
-                        <h3>Tutorials</h3>
-                        <li class="">
-                            <a class="act" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" >Simple Programming</a>
-                            <ul class="collapse list-unstyled" id="homeSubmenu">
-                                <li class="active"><a href="#home" id="bes" >Home</a></li>
-                                <li><a href="#history" id="srch" >Search History</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="act" id="role_home" href="#pageSubmenu" >Role</a>
-
-                        </li>
-                    </ul>
+                   </div>
                 </nav>
+                 <div class="row content2">
 
-		              <nav class="navbar navbar-fixed-top " id="toggle">
-                    <div class="container-fluid">
-
-                        <div class="navbar-header">
-
-                            <h3>Basic Programming Tutorials</h3>
-                        </div>
-
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Conatac</a></li>
-                                <li><a href="#">Profile</a></li>
-                                <li>
-                                  <div class="dropdown">
-                                    <button class="btn navbar-btn dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Action
-                                    <span class="caret"></span></button>
-                                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                                      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">user Profile</a></li>
-                                      <li role="presentation"><a role="menuitem" tabindex="-1" href="logout.php">Log Out</a></li>
-                                    </ul>
-                                  </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-
-		            <div id="content">
-
-                </div>
-        </div>
-
-
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <!-- Bootstrap Js CDN -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!-- jQuery Custom Scroller CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-
-  <script src="../resources/js/welcome.js"></script>
-
-    </body>
+                  </div>
+             </div>
+         </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../resources/js/welcome.js"></script>
+</body>
 </html>

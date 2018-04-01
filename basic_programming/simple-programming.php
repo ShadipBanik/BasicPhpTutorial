@@ -1,25 +1,12 @@
 <?php
  session_start();
 
- if(!$_SESSION['email'])
+ if(!$_SESSION['user']['role'])
  {
 
    header("Location: ../user_management/login.php");//redirect to login page to secure the welcome page without login access.
  }
  ?>
-<!DOCTYPE html>
-<html lang="en" >
-
-<head>
-  <meta charset="UTF-8">
-  <title>Responsive CSS Tabs</title>
-
-      <link rel="stylesheet" href="../resources/css/style.css" />
-      <script src="../resources/js/jquery-1.11.1.min.js"> </script>
-      <script src="../resources/js/script.js"> </script>
-</head>
-
-<body>
 
   <h1>Simple Programming Converter.</h1>
 
@@ -167,7 +154,7 @@
   </div>
 </section>
 <section id="content6">
-  <div class="center">
+       <div class="center">
         <h1>
         String Manipulation
         </h1>
@@ -185,13 +172,7 @@
 
                     <input class="divbutton" id="divbutton"  type="submit" value="CONVERT" />
 
-  </div>
-</section>
-
+       </div>
+  </section>
 </main>
-
-
-
-</body>
-
-</html>
+      <script src="../resources/js/script.js"> </script>

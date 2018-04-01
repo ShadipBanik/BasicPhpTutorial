@@ -1,9 +1,9 @@
 <?php
 include '../include/connect.php';
-$addrole=$_POST['addrole'];
+$create_role=$_POST['create_role'];
 
 $sql="INSERT INTO role (name,create_date)
-VALUES ('$addrole',CURRENT_TIMESTAMP()) ";
+VALUES ('$create_role',CURRENT_TIMESTAMP()) ";
 
 if($conn->query($sql)==true)
 {
