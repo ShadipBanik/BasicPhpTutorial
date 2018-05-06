@@ -9,7 +9,7 @@
        <td><?php echo $row['name']; ?></td>
        <td><?php echo $row['create_date']; ?></td>
        <td><?php echo $row['update_date']; ?></td>
-
+     
      </tr>
     <?php
     }

@@ -44,3 +44,17 @@ $(".content2").load("../user_management/add_role.php");
 
     });
 });
+$(document).ready(function(){
+   $("#adqus").click(function(){
+
+$(".content2").load("../user_management/add_qus.php");
+
+    });
+});
+$(document).ready(function(){
+   $("#all_qs").click(function(){
+
+$(".content2").load("../user_management/all_qus.php");
+
+    });
+});

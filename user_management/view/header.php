@@ -9,7 +9,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../resources/login_resource/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../resources/login_resource/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../resources/login_resource/css/font-awesome.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../resources/login_resource/vendor/animate/animate.css">
 <!--===============================================================================================-->

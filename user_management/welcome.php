@@ -16,6 +16,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link rel="stylesheet" href ="../resources/css/style.css">
       <link rel="stylesheet" href="../resources/css/sipmle.css" />
+
 </head>
 
 <body>
@@ -24,29 +25,45 @@
           <div class="col-sm-2 sidenav  navbar-fixed-top hidden-xs">
               <h2>Tutorials</h2>
               <hr>
-              <ul class="nav nav-pills  nav-stacked">
-            <li class="active">
-              <a href="#section1" data-toggle="collapse" data-target="#demo">Simple Programming &nbsp;<span class="glyphicon glyphicon-menu-down"></span></a>
-                <ul id="demo" class="collapse">
-                  <li class="active"><a id="bes" href="#"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Home</a></li>
-                  <?php
-                  include 'include/connect.php';
-                   $sql = "SELECT name FROM `role` WHERE id=".$_SESSION['user']['role'];
-                   $rl_run=mysqli_query($conn,$sql);
-                   $row=mysqli_fetch_assoc($rl_run);
+            <ul class="nav nav-pills  nav-stacked">
+              <?php
+              include 'include/connect.php';
+               $sql = "SELECT name FROM `role` WHERE id=".$_SESSION['user']['role'];
+               $rl_run=mysqli_query($conn,$sql);
+               $row=mysqli_fetch_assoc($rl_run);
 
-                  if($row['name']=='admin'){
-                   echo '<li><a  id="srch" href="#"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Search History</a></li>';
+                ?>
+              <li class="active">
+                  <a href="#section1" data-toggle="collapse" data-target="#demo">Simple Programming &nbsp;<span class="glyphicon glyphicon-menu-down"></span></a>
+                      <ul id="demo" class="collapse">
+                            <li class="active"><a id="bes" href="#"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Home</a></li>
+                    <?php
+                     if($row['name']=='admin'){
+                             echo '<li><a  id="srch" href="#"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Search History</a></li>';
+                     }
+                    ?>
+                      </ul>
+                 </li>
+
+                <?php
+                    if($row['name']=='admin'){
+                    echo '<li><a href="#" id="add_role">Role</a></li>';
+                     }
                   ?>
-                </ul>
-               </li>
-               <?php
-
-                echo '<li><a href="#" id="add_role">Role</a></li>';
-
-            }
-                  ?>
-              </ul><br>
+                  <li>
+                      <a href="#" data-toggle="collapse" data-target="#qus">Question &nbsp;<span class="glyphicon glyphicon-menu-down"></span></a>
+                      <ul id="qus" class="collapse">
+                           <li><a href="#" id="adqus"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp;Add Question</a></li>
+                          <?php
+                          if ($row['name']=='admin') {
+                          # code...
+                          echo '<li><a href="#" id="all_qs"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp; All Question</a></li>';
+                          }
+                          ?>
+                      </ul>
+                  </li>
+            </ul>
+            <br>
           </div>
            <div class="col-sm-10">
                 <nav class="navbar navbar-default col-sm-10 navbar-fixed-top ">
@@ -56,10 +73,10 @@
                       </div>
 
                          <ul class="nav navbar-nav navbar-right">
-                           <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
-                           <li><a href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Contact</a></li>
-                           <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;Profile</a></li>
-                           <li>
+                               <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+                               <li><a href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Contact</a></li>
+                               <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;Profile</a></li>
+                               <li>
                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Action &nbsp;<span class="glyphicon glyphicon-menu-down"></span></a>
 
                              <ul class="dropdown-menu">
@@ -81,5 +98,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="../resources/js/welcome.js"></script>
+
+
 </body>
 </html>

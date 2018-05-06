@@ -15,7 +15,7 @@ hr{
   .row.content {height: auto;}
 }
 .col-sm-10 {
-    margin-left: 228px;
+    margin-left: 227px;
     padding: 7px;
 }
 .content2{
@@ -28,27 +28,29 @@ hr{
     color: #fff;
     background-color: #7fe08fcc;
 }
-.nav>li>a{
+.glyphicon-menu-down{float: right;}
+.nav-pills>li>a{
      text-decoration: none;
      color: #fff;
    }
-.nav>li>a:focus, .nav>li>a:hover {
+.nav-pills>li>a:focus, .nav-pills>li>a:hover {
     text-decoration: none;
     background-color: #6edc89;
     color: #fff;
 }
-#demo{
-       background: #328e59;
-}
-#demo>li>a{
+.nav-pills>li>ul>li>a{
      text-decoration: none;
      color: #fff;
    }
-  #demo>li>a:focus, #demo>li>a:hover {
+   .nav-pills>li>ul>li>a:focus, .nav-pills>li>ul>li>a:hover {
        text-decoration: none;
        color: black;
    }
-.active>ul>li{
+.nav-pills>li>ul{
+       background: #328e59;
+}
+
+.nav-pills>li>ul>li{
   display:block;
   padding:5px;
 }

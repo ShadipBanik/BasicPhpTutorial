@@ -156,7 +156,7 @@
 <section id="content6">
        <div class="center">
         <h1>
-        String Manipulation
+        Divisible Number
         </h1>
              <div class="divmsg" id="divmsg"></div>
                     <div class="divelmnt1">

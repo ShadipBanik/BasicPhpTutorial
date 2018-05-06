@@ -22,6 +22,9 @@ select.input-sm {
    vertical-align: top;
    border-top: none;
 }
+.table>thead>tr>th{
+  text-align:center;
+}
 .tbl-default{background: #60c76482;}
 form{display: inline-block;}
 .table{text-align: center;}
