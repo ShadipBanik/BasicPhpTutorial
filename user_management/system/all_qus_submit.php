@@ -8,7 +8,7 @@
       $title=$row['title'];
       $qus_id=$row['qusID'];
    ?>
-     <tr>
+     <tr >
        <td><?php echo $row['title']; ?></td>
        <td><?php echo $row['qustion']; ?></td>
          <td>
@@ -35,7 +35,7 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <button type="button" class="close"  data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close"  data-dismiss="modal"   aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">Update</h4>
                   </div>
                    <div id="qus_msg">
@@ -77,7 +77,7 @@
 
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"  >Cancel</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>
                     <button type="button" class="btn btn-primary" onclick="UpdateUserDetails()" >Save Changes</button>
                     <input type="hidden" id="hidden_user_id">
                   </div>
@@ -93,10 +93,14 @@
 
      </tr>
 <script type="text/javascript">
+
 $(document).ready(function() {
   $(".modal").on("hidden.bs.modal", function() {
     $("#qs_lvl").html("");
     $("#new_lvl_out").html("");
+    $("#all_qus_ptch").hide();
+    $('.content2').load('../user_management/all_qus.php');
+
   });
 });
 </script>

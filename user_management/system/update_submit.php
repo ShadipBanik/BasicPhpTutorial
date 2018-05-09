@@ -10,8 +10,8 @@ if(isset($_POST))
   $id = $_POST['id'];
   $title = $_POST['qs_title'];
   $qus = $_POST['qs_des'];
-  if( $id !=="" && $title !="" && $qus !==""  && !empty($_POST['new_lvl'])){
-    $new_lvl=$_POST['new_lvl'];
+  if( $id !=="" && $title !="" && $qus !==""  ){
+    if(empty($_POST['new_lvl'])){
     $query = "UPDATE qustion SET title= '$title',qustion = '$qus',update_date=CURRENT_TIMESTAMP WHERE  qusID='$id'";
     if (!$result = mysqli_query($conn, $query)) {
 
@@ -23,8 +23,25 @@ if(isset($_POST))
 
     }
     else {
+      echo  '<div class="alert alert-success alert-dismissible ">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+       Sucessfully Updated .
+      </div>
+      ';
+    }
+  }
+    else {
+              $query = "UPDATE qustion SET title= '$title',qustion = '$qus',update_date=CURRENT_TIMESTAMP WHERE  qusID='$id'";
+              if (!$result = mysqli_query($conn, $query)) {
 
+                echo  '<div class="alert alert-warning alert-dismissible ">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                 Somthing Wrong!
+                </div>
+                ';
 
+              }
+              $new_lvl=$_POST['new_lvl'];
               $temp=count($new_lvl);
               for ($i=0; $i<=$temp-1 ; $i++) {
               // echo "hi";

@@ -57,7 +57,7 @@
                           <?php
                           if ($row['name']=='admin') {
                           # code...
-                          echo '<li><a href="#" id="all_qs"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp; All Question</a></li>';
+                          echo '<li><a href="#" class="all_qs" id="all_qs"><span class="glyphicon glyphicon-arrow-right"></span>&nbsp; All Question</a></li>';
                           }
                           ?>
                       </ul>

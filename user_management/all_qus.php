@@ -12,11 +12,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>question</title>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="../resources/css/table.css">
 </head>
 <body>
-  <div class="container tbl-main">
+  <div class="container tbl-main" id="all_qus_ptch">
     <div id="del_msg">
     </div>
     <h2>All Records</h2><hr>
@@ -64,7 +64,8 @@
     </table>
 
   </div>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="../resources/js/crud.js"></script>
   <script src="../resources/js/qus.js"></script>
 </body>

@@ -39,7 +39,16 @@
         );
 
     }
-
+    // $(document).ready(function() {
+    //   $(".modal").on("hidden.bs.modal", function() {
+    //
+    //   });
+    //   petch_qus();
+    // });
+// function refresh(){
+//   $("#update_user_modal").hide();
+//   petch_qus();
+// }
     //add new level
     function New_lvl_Add(){
       var new_lvl=document.getElementById('new_lvl').value;
@@ -142,6 +151,7 @@ function lvlAdd(){
       alert('This level already exist');
     }
     else{
+           document.getElementById("display_lbl").innerHTML="Display Level";
            document.getElementById("lvl_out").innerHTML +='<div id="skill" style="float:left;margin:3px;padding:5px" class="well well-sm alert fade in "><input type="hidden" name="mylvl[]" id="mylvl" value="'+x+'""><button type="button" class="close" data-dismiss="alert">&times;</button>'+x+'</div>';
      }
   }
@@ -155,11 +165,42 @@ $(document).ready(function(){
       $.post("../user_management/system/qus_submit.php",
             {qs_title:$('#qs_title').val(),qs_qus:$('#qs_qus').val(),lvl_out:lvl_out},
 
-            function(data){
+            function(data,status){
                 $('#qust_msg').html(data);
+
+                var con = confirm("Are you sure,see your question");
+                if (con == true){
+                $("#add_qus").hide();
+                $('.content2').load('../user_management/all_qus.php');
+              }
+
             },
           );
 
     });
 
 });
+
+// Add qus lvl autocomplete
+$(document).ready(function(){
+	$("#lvl").keyup(function(){
+		$.ajax({
+		type: "POST",
+		url: "../user_management/system/atocmplt_lvl.php",
+		data:'keyword='+$(this).val(),
+		// beforeSend: function(){
+		// 	$("#lvl").css("background","#FFF url(LoaderIcon.gif) no-repeat 165px");
+		// },
+		success: function(data){
+			$("#suggesstion-box").show();
+			$("#suggesstion-box").html(data);
+			$("#lvl").css("background","#FFF");
+		}
+		});
+	});
+});
+//To select country name
+function selectCountry(val) {
+$("#lvl").val(val);
+$("#suggesstion-box").hide();
+}

@@ -70,13 +70,13 @@ include 'view/header.php';
 
 				      if($count==true)
 					      {
-									
+
 									$_SESSION['user']=array(
 									'email'=>$row['email'],
 									'password'=>$row['password'],
 									'role'=>$row['role']
 									);
-										echo "hello";
+
 									$role=$_SESSION['user']['role'];
 								  header('Location:welcome.php');
 				      }

@@ -4,10 +4,11 @@
       <title></title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 </head>
-<div class="container">
+<body>
+<div class="container " id="add_qus">
   <div class="form-horizontal">
     <div class="form-group">
       <div class="col-sm-offset-4">
@@ -35,13 +36,14 @@
     <div class="form-group">
        <label class="control-label col-sm-2" for="Catagory">Level</label>
       <div class="col-sm-5">
-        <input class="form-control" id="lvl" type="text" name="lvl_name" placeholder="Enter your level" value=""/>
+        <input class="form-control" id="lvl" autocomplete="off" type="text" name="lvl_name" placeholder="Enter your level" value=""/>
+        <div id="suggesstion-box" ></div>
       </div>
             <button class="btn btn-default" type="button" value="1" onclick="lvlAdd()" name="level_add">Add</button>
 
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="Catagory">Display Level</label>
+      <label id="display_lbl"class="control-label col-sm-2" for="Catagory"></label>
       <div id="lvl_out"  type="" class="col-sm-5">
       </div>
     </div>
@@ -52,7 +54,9 @@
     </div>
 </div>
 </div>
-
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="../resources/js/qus.js"></script>
 </body>
 </html>
