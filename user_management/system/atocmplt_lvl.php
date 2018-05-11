@@ -3,6 +3,7 @@
 include '../include/connect.php';
 if(!empty($_POST["keyword"])) {
 $query ="SELECT * FROM quslevel WHERE lvl_name like '" . $_POST["keyword"] ."%' ORDER BY lvl_name LIMIT 0,6";
+// suggest name with matching letter
 $result = mysqli_query($conn,$query);
 if(!empty($result)) {
 ?>
@@ -10,7 +11,7 @@ if(!empty($result)) {
 <?php
 foreach($result as $level_name) {
 ?>
-<li class="list-group-item" onClick="selectCountry('<?php echo $level_name["lvl_name"]; ?>');"><?php echo $level_name["lvl_name"]; ?></li>
+<li class="list-group-item" onClick="selectlvl('<?php echo $level_name["lvl_name"]; ?>');"><?php echo $level_name["lvl_name"]; ?></li>
 <?php } ?>
 </ul>
 <?php } } ?>

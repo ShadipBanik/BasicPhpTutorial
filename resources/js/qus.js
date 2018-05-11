@@ -182,6 +182,7 @@ $(document).ready(function(){
 });
 
 // Add qus lvl autocomplete
+// suggest name with matching letter
 $(document).ready(function(){
 	$("#lvl").keyup(function(){
 		$.ajax({
@@ -199,8 +200,8 @@ $(document).ready(function(){
 		});
 	});
 });
-//To select country name
-function selectCountry(val) {
+//To select level name
+function selectlvl(val) {
 $("#lvl").val(val);
 $("#suggesstion-box").hide();
 }
