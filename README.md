@@ -7,5 +7,3 @@ This is Basic Php project for beginners.Features are
 4. You can add/edit question
 
 Steps to install this project
-
-
